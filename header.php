@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -52,12 +55,28 @@
          <li class="nav-item">
               <a class="nav-link" href="#myid12">Contacts<span class="sr-only"></span></a>
          </li>
-         <li class="nav-item">
-              <a class="nav-link" href="signup.php">Sign Up<span class="sr-only"></span></a>
-         </li>
-         <li class="nav-item">
-              <a class="nav-link" href="login.php">Log In<span class="sr-only"></span></a>
-         </li>
+         <?php 
+         if(isset($_SESSION["username"])){
+        echo 
+        "<li class='nav-item'>
+              <a class='nav-link' href='profile.php'>Profile Page<span class='sr-only'></span></a>
+         </li>";
+        echo 
+        "<li class='nav-item'>
+              <a class='nav-link' href='logout.php'>Log Out<span class='sr-only'></span></a>
+         </li>";
+         }
+         else{
+          echo 
+          "<li class='nav-item'>
+                <a class='nav-link' href='signup.php'>Sign Up<span class='sr-only'></span></a>
+           </li>";
+          echo 
+          "<li class='nav-item'>
+                <a class='nav-link' href='login.php'>Log In<span class='sr-only'></span></a>
+           </li>";
+           }
+         ?>
               </ul>
            </div> 
       </div> </div>
