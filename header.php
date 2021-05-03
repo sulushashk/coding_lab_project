@@ -56,7 +56,7 @@ session_start();
               <a class="nav-link" href="#myid12">Contacts<span class="sr-only"></span></a>
          </li>
          <?php 
-         if(isset($_SESSION["username"])){
+         if(isset($_SESSION["userName"])){
         echo 
         "<li class='nav-item'>
               <a class='nav-link' href='profile.php'>Profile Page<span class='sr-only'></span></a>
