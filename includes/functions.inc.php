@@ -95,14 +95,14 @@ function emptyInputLogin($username, $pass) {
 }
 
 function loginUser($conn, $username, $pass) {
-    $uidExists = uidExists($conn, $username, $username);
+    $nameExists = uidExists($conn, $username, $username);
 
-    if($uidExists === false) {
+    if($nameExists === false) {
     header("location:../login.php?error= wronglogin");
     exit(); 
     }
 
-    $pwdHashed = $uidExists["usersPsW"];
+    $pwdHashed = $nameExists["usersPsW"];
     $checkPwd = password_verify($pass, $pwdHashed);
 
     if($checkPwd === false) {

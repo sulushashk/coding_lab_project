@@ -46,7 +46,7 @@ session_start();
          <li class="nav-item dropdown">
                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Products</a>
           <ul class="dropdown-menu">
-           <li><a class="dropdown-item" href="#">IPhone</a></li>
+           <li><a class="dropdown-item" href="iphone.php">IPhone</a></li>
            <li><a class="dropdown-item" href="#">IPad</a></li>
            <li><a class="dropdown-item" href="#">Mac</a></li>
            <li><a class="dropdown-item" href="#">AirPods</a></li>
