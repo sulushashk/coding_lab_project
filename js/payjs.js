@@ -1,6 +1,7 @@
 window.onload = function () {
 
     const name = document.getElementById('name');
+    const address = document.getElementById('address');
     const cardnumber = document.getElementById('cardnumber');
     const expirationdate = document.getElementById('expirationdate');
     const securitycode = document.getElementById('securitycode');
@@ -264,7 +265,9 @@ window.onload = function () {
     name.addEventListener('focus', function () {
         document.querySelector('.creditcard').classList.remove('flipped');
     });
-    
+        address.addEventListener('focus', function () {
+        document.querySelector('.creditcard').classList.remove('flipped');
+    });
     cardnumber.addEventListener('focus', function () {
         document.querySelector('.creditcard').classList.remove('flipped');
     });

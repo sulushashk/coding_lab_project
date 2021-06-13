@@ -72,11 +72,11 @@ if (isset($_POST['add_to_card'])) {
             <td></b>Total Price</b></td>
             <td>" . number_format($total, 2) . "</td>
             <td>
-            <a href='products.php'>
+            <a href='products.php?action=clearall'>
             <button class='btn btn-warning'>Clear all</button>
             </a>
             <a href='pay.php?action=buy'>
-            <button class='btn-primary'>Buy</button>
+            <button class='btn btn-primary'>Buy</button>
             </a>
             </td>
         </tr>
@@ -84,7 +84,6 @@ if (isset($_POST['add_to_card'])) {
         }
         echo $output;
         ?>
-    </div>
 </div>
 <?php
 if(isset($_GET['action'])){
